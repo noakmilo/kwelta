@@ -44,8 +44,75 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'nuxt-rfg-icon',
   ],
+
+  // Favicon
+  'rfg-icon': {
+    static: true,
+    staticPath: 'static',
+    masterPicture: 'static/favicon.png',
+    rfg: {
+      masterPicture: 'static/favicon.png',
+      iconsPath: '/',
+      design: {
+        ios: {
+          pictureAspect: 'noChange',
+          assets: {
+            ios6AndPriorIcons: false,
+            ios7AndLaterIcons: false,
+            precomposedIcons: false,
+            declareOnlyDefaultIcon: true
+          }
+        },
+        desktopBrowser: {},
+        windows: {
+          pictureAspect: 'noChange',
+          backgroundColor: '#ff0000',
+          onConflict: 'override',
+          assets: {
+            windows80Ie10Tile: false,
+            windows10Ie11EdgeTiles: {
+              small: false,
+              medium: true,
+              big: false,
+              rectangle: false
+            }
+          }
+        },
+        androidChrome: {
+          pictureAspect: 'shadow',
+          themeColor: '#ff0000',
+          manifest: {
+            name: 'Kwelta.tech',
+            startUrl: 'https://kwelta.tech',
+            display: 'standalone',
+            orientation: 'notSet',
+            onConflict: 'override',
+            declared: true
+          },
+          assets: {
+            legacyIcon: true,
+            lowResolutionIcons: false
+          }
+        },
+        safariPinnedTab: {
+          pictureAspect: 'blackAndWhite',
+          threshold: 66.40625,
+          themeColor: '#ff0000'
+        }
+      },
+      settings: {
+        compression: 3,
+        scalingAlgorithm: 'Mitchell',
+        errorOnImageTooSmall: false,
+        readmeFile: true,
+        htmlCodeFile: true,
+        usePathAsIs: false
+      }
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
