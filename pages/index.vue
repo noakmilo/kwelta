@@ -16,7 +16,7 @@
                 <a :href="article.link" target="_blank">
                     <div class="flex justify-between align-start">
                         <div class="mt-2 mb-2">
-                            <h1 class="text-base text-gray-800">{{ article.date }}</h1>
+                            <h1 class="text-base text-gray-800">{{ article.pubDate }}</h1>
                             <h2 class="text-[1.6rem] font-bold text-gray-700 dark:text-white dark:hover:text-gray-400">{{ article.title }}</h2>
                         </div>
                     </div>
